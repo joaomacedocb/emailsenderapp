@@ -2,6 +2,7 @@ package com.joao.emailsender.models;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import com.joao.emailsender.enums.StatusEmail;
 
@@ -22,7 +23,7 @@ public class EmailModel implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long emailId;
+    private UUID emailId;
     
     private String ownerRef;
     private String emailFrom;
