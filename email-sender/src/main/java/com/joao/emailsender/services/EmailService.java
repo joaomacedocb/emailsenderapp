@@ -42,8 +42,8 @@ public class EmailService {
             return emailRepository.save(emailModel);
     }
     
-    public List<EmailModel> findAllByOwner (String ownerRef){
-    	return emailRepository.findAllByOwnerRef(ownerRef);
+    public List<EmailModel> findAllEmails() {
+    	return emailRepository.findAll();
     }
 
 }
