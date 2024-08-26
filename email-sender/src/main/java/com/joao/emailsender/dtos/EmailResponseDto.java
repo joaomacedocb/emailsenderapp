@@ -15,7 +15,6 @@ public class EmailResponseDto {
     private LocalDateTime sendDateEmail;
     private StatusEmail statusEmail;
 
-    // Getters and Setters
     public Integer getEmailId() {
         return emailId;
     }
