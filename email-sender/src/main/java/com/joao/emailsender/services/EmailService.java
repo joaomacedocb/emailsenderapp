@@ -1,6 +1,7 @@
 package com.joao.emailsender.services;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailException;
@@ -39,6 +40,10 @@ public class EmailService {
             emailModel.setStatusEmail(StatusEmail.ERROR);
         } 
             return emailRepository.save(emailModel);
+    }
+    
+    public List<EmailModel> findAllByOwner (String ownerRef){
+    	return emailRepository.findAllByOwnerRef(ownerRef);
     }
 
 }
